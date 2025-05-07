@@ -1,0 +1,17 @@
+.bannerBox{
+    position: relative;
+}
+
+.texto{
+    position: absolute;
+    top: 40%;
+    left: 6%;
+    color: white;
+    width: 40%;
+    font-size: 18px;
+}
+
+.banner{
+    width: 100%;
+    height: auto;
+}

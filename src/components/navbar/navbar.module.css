@@ -1,0 +1,25 @@
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.boxNavbar{
+    position: sticky;
+    top: 0;
+    background-color: rgba(13,13,13,1);
+    color: rgb(240, 240, 240);
+    z-index: 1000;
+    display: inline-flex;
+    width: 100%;
+}
+
+.titulo{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    padding: 5px 0 0 20px;
+}
+
+
+.cursor {
+    display: inline-block;
+    animation: blink 0.5s infinite;
+}

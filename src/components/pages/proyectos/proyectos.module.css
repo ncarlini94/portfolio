@@ -1,0 +1,13 @@
+.container{
+    background-color: rgba(10, 10, 10, 0.9);
+}
+
+.cardBox{
+    height: 100vh;
+    display: grid;
+    grid:  70vh / auto auto;
+    padding: 0 115px;
+    align-items: center;
+    justify-items: center;
+
+}
