@@ -1,5 +1,5 @@
 import React from 'react'
-import Banner from '../../assets/Banner.webp';
+import Banner from '../../assets/banner.webp';
 import Styles from './banner.module.css';
 
 const banner = () => {
