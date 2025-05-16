@@ -4,7 +4,7 @@ import Styles from './carousel.module.css'
 const Carousel = ({id, imagen}) => {
 
 
-  return (
+return (
     <>
         <div id={id} className="carousel slide carousel-fade"  data-bs-ride="carousel">
             <div className="carousel-inner">

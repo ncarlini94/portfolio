@@ -13,7 +13,8 @@ const proyectos = () => {
 
   return (
     <>
-      <div className={`${Styles.container}`}>
+      <section id="proyectos">
+      <div className={`${Styles.container} bg-slate-900`}>
       <h2 style={{color:'white',textAlign:'center',padding:'80px 0 0 0'}}>Proyectos</h2>
         <div className={`${Styles.cardBox}`}>
             <Card
@@ -32,6 +33,7 @@ const proyectos = () => {
               />
         </div>
       </div>
+      </section>
     </>
   )
 }

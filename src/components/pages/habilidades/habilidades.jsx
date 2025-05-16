@@ -15,7 +15,8 @@ const habilidades = () => {
 
   return (
     <>
-        <div className={`${Styles.container}`}>
+    <section id="habilidades">
+        <div className={`${Styles.container} bg-slate-900`}>
         <h2 style={{color:'white',textAlign:'center', padding:'50px 0 50px 0'}}>Habilidades</h2>
           <div className={`${Styles.listBox}`}>
             <div className={`${Styles.imgBox}`}>
@@ -48,6 +49,7 @@ const habilidades = () => {
             </div>
         </div>
         </div>
+        </section>
     </>
   )
 }
