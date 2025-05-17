@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Styles from './navbar.module.css';
 import Logo from '../../assets/logo.png';
 
@@ -22,11 +22,14 @@ const Navbar = () => {
     return (
         <>
             <div id='navbar' className={`${Styles.boxNavbar} flex justify-between top-0 left-0 w-full z-50 transition-all duration-300 bg-slate-900/90 backdrop-blur-sm shadow-lg`}>
-                <div id="titulo" className={`${Styles.titulo} ms-4 order-first m-0 p-0`}>
+                <div className=' order-first flex'>
+                <img src={Logo} className={`${Styles.logo} w-10 h-10 order-first ms-4 shadow-blue-500/50`}/>
+                <div id="titulo" className={`${Styles.titulo} ms-3 p-0`}>
                     N<span className="cursor">_</span>
                 </div>
+                </div>
                 <div className='order-last'>
-                    <ul className='flex items-center content-center justify-center h-full me-8'>
+                    <ul className='flex items-center content-center justify-center h-full me-20'>
                         <li className={`${Styles.navItem} hover:text-slate-300 px-2`}>
                             <a className={`${Styles.itemList}`} href='#home'>Home</a>
                         </li>

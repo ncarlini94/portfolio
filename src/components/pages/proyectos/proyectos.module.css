@@ -1,8 +1,9 @@
-.container{
+.section{
+    height: auto;
+    scroll-snap-align: start;
 }
 
 .cardBox{
-    height: 100vh;
     display: grid;
     grid:  70vh / auto auto;
     padding: 0 115px;

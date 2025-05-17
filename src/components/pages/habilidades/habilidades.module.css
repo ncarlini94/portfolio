@@ -1,5 +1,6 @@
-.container{
-    
+.section{
+    height: auto;
+    scroll-snap-align: start;
 }
 
 .listBox{
