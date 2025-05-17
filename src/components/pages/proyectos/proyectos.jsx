@@ -40,7 +40,7 @@ const proyectos = () => {
       <div className={`${Styles.container} container mx-auto px-6`}>
                 <div className="text-center mb-8">
           <h2 className="text-3xl font-bold mb-2 text-white">My Projects</h2>
-          <div className={`w-20 h-1 mx-auto mb-6 bg-teal-400`}></div>
+          <div className={`w-20 h-1 mx-auto mb-6 bg-sky-400`}></div>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {proyectos.map((proyecto) => (
@@ -74,7 +74,7 @@ const proyectos = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-white mb-2 flex items-center">
-                  <FileCode size={20} className={`mr-2 text-teal-400`} />
+                  <FileCode size={20} className={`mr-2 text-sky-400`} />
                   {proyecto.titulo}
                 </h3>
                 <p className={`mb-4 text-slate-300`}>
@@ -84,7 +84,7 @@ const proyectos = () => {
                   {proyecto.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className={`text-xs px-3 py-1 rounded-full bg-slate-700 text-teal-400`}
+                      className={`text-xs px-3 py-1 rounded-full bg-slate-700 text-sky-300`}
                     >
                       {tag}
                     </span>

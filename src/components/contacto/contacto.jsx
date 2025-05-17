@@ -76,7 +76,7 @@ const Contacto = () => {
       <div className="container mx-auto">
         <div className="text-center mb-2">
           <h2 className="text-3xl font-bold mb-1">Contacto</h2>
-          <div className={`w-20 h-1 mx-auto bg-teal-400`}></div>
+          <div className={`w-20 h-1 mx-auto bg-sky-400`}></div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -85,7 +85,7 @@ const Contacto = () => {
               <h3 className="text-xl font-bold">Información de contacto</h3>
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <div className={`p-3 rounded-lg mr-4 bg-slate-700 text-teal-400`}>
+                  <div className={`p-3 rounded-lg mr-4 bg-slate-700 text-sky-400`}>
                     <Mail size={20} />
                   </div>
                   <div>
@@ -94,7 +94,7 @@ const Contacto = () => {
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <div className={`p-3 rounded-lg mr-4 bg-slate-700 text-teal-400`}>
+                  <div className={`p-3 rounded-lg mr-4 bg-slate-700 text-sky-400`}>
                     <Phone size={20} />
                   </div>
                   <div>
@@ -103,7 +103,7 @@ const Contacto = () => {
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <div className={`p-3 rounded-lg mr-4 bg-slate-700 text-teal-400`}>
+                  <div className={`p-3 rounded-lg mr-4 bg-slate-700 text-sky-400`}>
                     <MapPin size={20} />
                   </div>
                   <div>
@@ -201,7 +201,7 @@ const Contacto = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`px-6 py-3 rounded-lg font-medium flex items-center justify-center transition-colors duration-300 w-full bg-teal-600 text-white hover:bg-teal-700`}
+                  className={`px-6 py-3 rounded-lg font-medium flex items-center justify-center transition-colors duration-300 w-full bg-sky-600 text-white hover:bg-sky-700`}
                 >
                   {isSubmitting ? (
                     <>

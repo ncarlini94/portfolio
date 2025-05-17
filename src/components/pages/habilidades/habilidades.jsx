@@ -40,7 +40,7 @@ const habilidades = () => {
         <div className={`${Styles.container} bg-slate-900 min-h-140`}>
         <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-2 text-light">Habilidades</h2>
-            <div className={`w-20 h-1 mx-auto mb-6 bg-teal-400`}></div>
+            <div className={`w-20 h-1 mx-auto mb-6 bg-sky-400`}></div>
         </div>
         <div className="grid md:grid-cols-4 gap-4 max-w-7xl mx-auto">
           {Object.entries(categorias).map(([categoria, habilidades]) => (
