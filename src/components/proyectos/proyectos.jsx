@@ -1,21 +1,22 @@
-import HomeNetflix from './../../../assets/Netflix/homeNetflix.jpeg'
-import InfoNetflix from './../../../assets/Netflix/infoNetflix.jpeg'
-import TrailerNetflix from './../../../assets/Netflix/trailerNetflix.jpeg'
-import LineasCelulares from './../../../assets/SistemaCelulares/Lineas.png'
-import DetallesCelulares from './../../../assets/SistemaCelulares/Detalles.png'
-import UsuariosCelulares from './../../../assets/SistemaCelulares/Usuarios.png'
+import { useTranslation } from 'react-i18next'
+import useTheme from '../../hooks/useTheme'
+import HomeNetflix from './../../assets/Netflix/homeNetflix.jpeg'
+import LineasCelulares from './../../assets/SistemaCelulares/Lineas.png'
 import Styles from './proyectos.module.css'
 import { ExternalLink, Github, FileCode } from 'lucide-react'
 
-const proyectos = () => {
+const Proyectos = () => {
+
+  const { t } = useTranslation()
+  const { isDarkMode } = useTheme()
 
 
   const proyectos = [
     {
       id: 'Netflix',
       imagen: HomeNetflix,
-      titulo: 'Netflix',
-      descripcion: 'Proyecto de Netflix con React y Firebase',
+      titulo: 'NetflixTitulo',
+      descripcion: 'Netflix',
       url: 'https://netproyect.netlify.app/',
       tags: ['React', 'Firebase', 'Javascript', 'CSS', 'Bootstrap'],
       github: '#',
@@ -24,8 +25,8 @@ const proyectos = () => {
     {
       id: 'Celulares',
       imagen: LineasCelulares,
-      titulo: 'Sistema de Celulares',
-      descripcion: 'Sistema de celulares con React y NodeJS',
+      titulo: 'SistemaTitulo',
+      descripcion: 'Sistema',
       url: 'https://sistemacelulares.onrender.com',
       tags: ['React', 'Node.js', 'postgreSQL', 'Express', 'Bootstrap', 'CSS'],
       github: '#',
@@ -36,20 +37,20 @@ const proyectos = () => {
 
   return (
     <>
-      <section id="proyectos" className={`${Styles.section} scroll-mt-20 bg-slate-900 bg-slate-900 text-white transition-colors duration-300`}>
-      <div className={`${Styles.container} container mx-auto px-6`}>
+      <section id="proyectos" className={`${Styles.section} ${isDarkMode ? 'bg-slate-900 bg-slate-900 text-white' : 'bg-slate-100'} section scroll-mt-20 transition-colors duration-300 `}>
+      <div className={`${Styles.container} container sm:py-8 lg:h-120 2xl:h-180 mx-auto px-6 content-center`}>
                 <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold mb-2 text-white">My Projects</h2>
+          <h2 className={`${isDarkMode ? 'text-white' : 'text-black'} text-3xl font-bold mb-2`}>{t("Proyectos")}</h2>
           <div className={`w-20 h-1 mx-auto mb-6 bg-sky-400`}></div>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {proyectos.map((proyecto) => (
-            <div key={proyecto.id} className="rounded-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2 group bg-slate-800">
+            <div key={proyecto.id} className={`${isDarkMode ? 'bg-slate-800' : 'bg-slate-400 drop-shadow-2xl'} rounded-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2 group `}>
             <div className="relative overflow-hidden">
               <img
                   src={proyecto.imagen}
                   alt={proyecto.titulo}
-                  className="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className={`absolute inset-0 flex items-center justify-center gap-4 opacity-1 group-hover:opacity-100 transition-opacity duration-300 bg-slate-900/70`}>
                   <a
@@ -73,18 +74,18 @@ const proyectos = () => {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-2 flex items-center">
-                  <FileCode size={20} className={`mr-2 text-sky-400`} />
-                  {proyecto.titulo}
+                <h3 className="text-xl font-bold mb-2 flex items-center">
+                  <FileCode size={20} className={`${isDarkMode ? 'text-sky-400' : ' text-white'} mr-2`} />
+                  {t(proyecto.titulo)}
                 </h3>
-                <p className={`mb-4 text-slate-300`}>
-                  {proyecto.descripcion}
+                <p className={`${isDarkMode ? 'text-slate-300' : ' text-white'} mb-4`}>
+                  {t(proyecto.descripcion)}
                 </p>
                 <div className="flex flex-wrap gap-2 mt-4">
                   {proyecto.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className={`text-xs px-3 py-1 rounded-full bg-slate-700 text-sky-300`}
+                      className={`${isDarkMode ? 'bg-slate-700 text-sky-300' : 'bg-slate-500 text-white'} text-xs px-3 py-1 rounded-full`}
                     >
                       {tag}
                     </span>
@@ -100,4 +101,4 @@ const proyectos = () => {
   )
 }
 
-export default proyectos
+export default Proyectos
