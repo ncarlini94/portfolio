@@ -38,12 +38,12 @@ const Proyectos = () => {
   return (
     <>
       <section id="proyectos" className={`${Styles.section} ${isDarkMode ? 'bg-slate-900 bg-slate-900 text-white' : 'bg-slate-100'} section scroll-mt-20 transition-colors duration-300 `}>
-      <div className={`${Styles.container} container sm:py-8 lg:h-120 2xl:h-180 mx-auto px-6 content-center`}>
+      <div className={`${Styles.container} container max-sm:py-8 lg:h-120 2xl:h-180 mx-auto content-center`}>
                 <div className="text-center mb-8">
           <h2 className={`${isDarkMode ? 'text-white' : 'text-black'} text-3xl font-bold mb-2`}>{t("Proyectos")}</h2>
           <div className={`w-20 h-1 mx-auto mb-6 bg-sky-400`}></div>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-sm:px-2">
           {proyectos.map((proyecto) => (
             <div key={proyecto.id} className={`${isDarkMode ? 'bg-slate-800' : 'bg-slate-400 drop-shadow-2xl'} rounded-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2 group `}>
             <div className="relative overflow-hidden">

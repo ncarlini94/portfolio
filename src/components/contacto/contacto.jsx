@@ -77,15 +77,15 @@ const Contacto = () => {
   return (
     <>
         <section id="contacto" className={`${Styles.section} ${isDarkMode ? 'bg-slate-900 text-white' : 'bg-slate-100'} sm:py-10 2xl:h-180 lg:h-140 2xl:py-10 lg:py-12 transition-colors duration-300`}>
-      <div className="container mx-auto content-center">
+      <div className="container mx-auto content-center max-sm:py-2">
         <div className="text-center 2xl:mb-10 lg:mb-4">
           <h2 className="text-3xl font-bold mb-1">{t("Contacto")}</h2>
           <div className={`w-20 h-1 mx-auto bg-sky-400`}></div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto max-sm:pt-6 max-sm:px-2">
           <div>
-            <div className={`sm:px-0 sm:pt-6 px-4 rounded-lg mb-6`}>
+            <div className={`sm:px-0 max-sm:pt-6 px-4 rounded-lg mb-2`}>
               <h3 className="text-xl font-bold">{t("Informacion")}</h3>
               <div className="space-y-4 pt-1">
                 <div className="flex items-center">
@@ -118,7 +118,7 @@ const Contacto = () => {
               </div>
             </div>
             <div className={`${isDarkMode ? ' bg-slate-800' : 'bg-slate-400 text-white drop-shadow-2xl'} p-6 rounded-lg`}>
-              <h3 className="text-xl font-bold mb-4">{t("Redes")}</h3>
+              <h3 className="text-xl font-bold">{t("Redes")}</h3>
               <div className="flex space-x-4">
                 <div className={`${isDarkMode ? 'bg-slate-700 text-white hover:bg-sky-700' : 'bg-slate-300 text-slate-600 hover:bg-slate-100'} w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300`}>
                   <span className="font-bold">in</span>
@@ -130,7 +130,7 @@ const Contacto = () => {
             </div>
           </div>
 
-          <div className={`${isDarkMode ? 'bg-slate-800' : 'bg-slate-400 drop-shadow-2xl'} sm:py-6 px-6 rounded-lg `}>
+          <div className={`${isDarkMode ? 'bg-slate-800' : 'bg-slate-400 drop-shadow-2xl'} px-6 max-sm:py-6 rounded-lg `}>
             <h3 className={`${isDarkMode ? 'text-white' : 'text-white'} text-xl font-bold`}>{t("Contacto")}</h3>
             {isSubmitted ? (
               <div className={`p-4 rounded-lg mb-6 bg-green-800/50 text-green-200`}>

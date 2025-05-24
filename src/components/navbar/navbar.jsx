@@ -78,7 +78,7 @@ const toggleMenu = () => {
             </div>
 
       <div className="hidden md:flex order-last  content-center">
-        <ul className="flex items-center content-center justify-center h-full me-20">
+        <nav className="flex items-center content-center justify-center h-full me-20 list-none">
           {sections.map((section) => (
             <li key={section} className={`${Styles.navItem} ${isDarkMode ? 'hover:text-slate-300' : 'hover:text-slate-600'} px-3`}>
               <a className={`${Styles.itemList}`} href={`#${section}`}>
@@ -107,14 +107,31 @@ const toggleMenu = () => {
               ))
             }
             </select></li>
-        </ul>
+        </nav>
       </div>
 
-      <div className="flex md:hidden order-last items-center">
+      <div className="flex md:hidden order-last items-center pe-4">
+      <select
+              className={`rounded-xl me-2`}
+              value={i18n.language}
+              onChange={changeLanguage}
+            >
+            {
+              languageList.map((language) => (
+                <option
+                  key={language.id}
+                  className={`text-black`}
+                  value={language.id}
+                >
+                  {t(language.name)}
+                </option>
+              ))
+            }
+            </select>
         <ThemeToggle />
         <button
           onClick={toggleMenu}
-          className="ml-4 p-1 rounded-md text-slate-300"
+          className={`${isDarkMode ? 'text-white' : 'text-black'} ml-4 p-1 ps-2 rounded-md text-slate-300 `}
           aria-label="Toggle Menu"
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -122,12 +139,12 @@ const toggleMenu = () => {
       </div>
 
       <div
-        className={`absolute top-full w-full transition-all duration-300 ease-in-out ${
-          isMenuOpen ? "max-h-screen opacity-100 visible" : "max-h-0 opacity-0 invisible"
-        } bg-slate-900`}
+        className={`absolute top-full w-full transition-all duration-300 ease-in-out
+        ${isMenuOpen ? "max-h-screen opacity-100 visible" : "max-h-0 opacity-0 invisible"}
+        bg-slate-900 list-none`}
       >
-        <div className="container mx-auto px-6 py-4">
-          <nav className="flex flex-col space-y-4">
+        <div className={`${isDarkMode ? 'bg-slate-900' : 'bg-slate-300'} container mx-auto px-6 py-4`}>
+          <nav className={` flex flex-col space-y-4`}>
             {sections.map((section) => (
             <li key={section} className={`${Styles.navItem} hover:text-slate-300 px-3`}>
               <a className={`${Styles.itemList}`} href={`#${section}`}>

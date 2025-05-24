@@ -54,12 +54,12 @@ const Habilidades = () => {
   return (
     <>
     <section id="habilidades" className={`${Styles.section} section`}>
-        <div className={`${Styles.container} ${isDarkMode ? 'dark:bg-slate-900 bg-slate-100 text-light' : 'bg-slate-100'} sm:px-6 sm:py-10 2xl:h-190 lg:h-150 mx-auto content-center`}>
+        <div className={`${Styles.container} ${isDarkMode ? 'dark:bg-slate-900 bg-slate-100 text-light' : 'bg-slate-100'}  px-3 py-0 sm:px-6 sm:py-10 h-180 lg:h-150 2xl:h-190 mx-auto content-center`}>
         <div className="text-center mb-8">
             <h2 className={`${isDarkMode ? 'text-light' : 'text-black'} text-3xl font-bold mb-2`}>{t("Habilidades")}</h2>
             <div className={`w-20 h-1 mx-auto mb-6 bg-sky-400`}></div>
         </div>
-        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 max-sm:gap-3 sm:gap-4 max-w-7xl mx-auto">
           {Object.entries(categorias).map(([categoria, habilidades]) => (
             <div key={categoria} className={`${isDarkMode ? 'bg-slate-700 text-white' : 'text-white bg-slate-400 drop-shadow-2xl'} p-4 rounded-lg text-center`}>
               <h3 className="text-xl font-semibold capitalize pb-2">{categoria}</h3>
