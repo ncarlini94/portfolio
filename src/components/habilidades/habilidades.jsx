@@ -53,7 +53,7 @@ const Habilidades = () => {
 
   return (
     <>
-    <section id="habilidades" className={`${Styles.section} section`}>
+    <section id="Habilidades" className={`${Styles.section} section`}>
         <div className={`${Styles.container} ${isDarkMode ? 'dark:bg-slate-900 bg-slate-100 text-light' : 'bg-slate-100'}  px-3 py-0 sm:px-6 sm:py-10 h-180 lg:h-150 2xl:h-190 mx-auto content-center`}>
         <div className="text-center mb-8">
             <h2 className={`${isDarkMode ? 'text-light' : 'text-black'} text-3xl font-bold mb-2`}>{t("Habilidades")}</h2>

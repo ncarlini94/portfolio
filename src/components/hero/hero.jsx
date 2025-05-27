@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <>
       <section
-        id="home"
+        id="Inicio"
         className={`
           ${Styles.hero}
           ${isDarkMode ? 'bg-slate-900 text-white' : 'bg-slate-100'}

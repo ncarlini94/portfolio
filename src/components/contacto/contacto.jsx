@@ -76,7 +76,7 @@ const Contacto = () => {
 
   return (
     <>
-        <section id="contacto" className={`${Styles.section} ${isDarkMode ? 'bg-slate-900 text-white' : 'bg-slate-100'} sm:py-10 2xl:h-180 lg:h-140 2xl:py-10 lg:py-12 transition-colors duration-300`}>
+        <section id="Contacto" className={`${Styles.section} ${isDarkMode ? 'bg-slate-900 text-white' : 'bg-slate-100'} sm:py-10 2xl:h-180 lg:h-140 2xl:py-10 lg:py-12 transition-colors duration-300`}>
       <div className="container mx-auto content-center max-sm:py-2">
         <div className="text-center 2xl:mb-10 lg:mb-4">
           <h2 className="text-3xl font-bold mb-1">{t("Contacto")}</h2>

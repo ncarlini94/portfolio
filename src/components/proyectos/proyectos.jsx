@@ -37,7 +37,7 @@ const Proyectos = () => {
 
   return (
     <>
-      <section id="proyectos" className={`${Styles.section} ${isDarkMode ? 'bg-slate-900 bg-slate-900 text-white' : 'bg-slate-100'} section scroll-mt-20 transition-colors duration-300 `}>
+      <section id="Proyectos" className={`${Styles.section} ${isDarkMode ? 'bg-slate-900 bg-slate-900 text-white' : 'bg-slate-100'} section scroll-mt-20 transition-colors duration-300 `}>
       <div className={`${Styles.container} container max-sm:py-8 lg:h-120 2xl:h-180 mx-auto content-center`}>
                 <div className="text-center mb-8">
           <h2 className={`${isDarkMode ? 'text-white' : 'text-black'} text-3xl font-bold mb-2`}>{t("Proyectos")}</h2>
