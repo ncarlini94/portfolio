@@ -15,34 +15,27 @@ const Hero = () => {
         className={`
           ${Styles.hero}
           ${isDarkMode ? 'bg-slate-900 text-white' : 'bg-slate-100'}
-          scroll-mt-30
+          scroll-mt-20
           relative
           h-134 sm:h-180 lg:h-140 2xl:h-180
           w-full
+          font-serif
         `}
       >
         <div
           className={`
             ${Styles.bannerBox}
             absolute
-            top-6 px-2 sm:p-0 sm:top-10 sm:left-20 md:top-60 xl:top-60 xl:left-20 2xl:top-85 2xl:left-45
+            top-6 px-2 sm:p-0 sm:top-10 sm:left-20 md:top-60 xl:top-70 xl:left-20 2xl:top-95 2xl:left-45
           `}
         >
-          <p
-            className={`
-              ${isDarkMode ? 'text-white' : 'text-black'}
-              text-lg mb-4
-            `}
-          >
-            {t("Hola")}
-          </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3 leading-tight ps-2">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3 leading-tight">
             Nicolás Carlini
           </h1>
           <p
             className={`
               ${Styles.texto}
-              text-base md:text-lg max-w-xl mb-8 leading-relaxed
+              text-base md:text-lg max-w-xl mb-8 leading-relaxed ps-2
               ${isDarkMode ? 'text-slate-300' : 'text-slate-900'}
             `}
           >

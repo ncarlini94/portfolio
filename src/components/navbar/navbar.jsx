@@ -68,7 +68,15 @@ const toggleMenu = () => {
         <>
           <div
           id="navbar"
-          className={`${Styles.boxNavbar} ${isDarkMode ? 'bg-slate-900/90 backdrop-blur-sm' : 'text-black bg-slate-300/90 backdrop-blur-sm'} flex justify-between top-0 left-0 w-full z-50 transition-all duration-300  shadow-lg`}
+          className={`
+            ${Styles.boxNavbar}
+            ${isDarkMode ? 'bg-slate-900/90 backdrop-blur-sm' :
+            'text-black bg-slate-300/90 backdrop-blur-sm'}
+            flex justify-between
+            top-0 left-0
+            w-full z-50
+            transition-all duration-300  shadow-lg
+            `}
           >
             <div className="order-first flex content-center items-center">
               <img src={Logo} className={`${Styles.logo} w-10 h-10 order-first ms-4 shadow-blue-500/50`} />
@@ -77,7 +85,7 @@ const toggleMenu = () => {
               </div>
             </div>
 
-      <div className="hidden md:flex order-last  content-center">
+      <div className="hidden md:flex order-last  content-center font-semibold">
         <nav className="flex items-center content-center justify-center h-full me-20 list-none">
           {sections.map((section) => (
             <li key={section} className={`${Styles.navItem} ${isDarkMode ? 'hover:text-slate-300' : 'hover:text-slate-600'} px-3`}>
