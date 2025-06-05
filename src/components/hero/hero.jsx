@@ -1,8 +1,10 @@
 import Styles from './hero.module.css';
-import logoHero from '../../assets/banner.png';
 import { ArrowDown } from 'lucide-react';
 import useTheme from '../../hooks/useTheme';
 import { useTranslation } from 'react-i18next';
+import logoDark from '../../assets/logoDark.png';
+import logoWhite from '../../assets/logoWhite.png';
+
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -49,13 +51,13 @@ const Hero = () => {
           2xl:top-40 2xl:right-60
         `}>
           <img
-            src={logoHero}
+            src={isDarkMode ? logoDark : logoWhite}
             alt="Logo"
             className={`
               ${Styles.logoHero}
               ${isDarkMode ? '' : 'inset-shadow-sm inset-shadow-indigo-500 shadow-lg shadow-cyan-900/50'}
               w-60 lg:w-99 lg:h-99 2xl:w-105 2xl:h-105
-              rounded-full shadow-lg
+              rounded-4xl shadow-lg
             `}
           />
         </div>
