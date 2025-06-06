@@ -3,7 +3,7 @@ import { ArrowDown } from 'lucide-react';
 import useTheme from '../../hooks/useTheme';
 import { useTranslation } from 'react-i18next';
 import logoDark from '../../assets/logoDark.png';
-import logoWhite from '../../assets/logoWhite.png';
+import logoWhite from '../../assets/logoWhite2.png';
 
 
 const Hero = () => {
@@ -28,7 +28,7 @@ const Hero = () => {
           className={`
             ${Styles.bannerBox}
             absolute
-            top-6 px-2 sm:p-0 sm:top-10 sm:left-20 md:top-60 xl:top-70 xl:left-20 2xl:top-95 2xl:left-45
+            top-10 px-2 sm:p-0 sm:top-10 sm:left-20 md:top-60 xl:top-70 xl:left-20 2xl:top-95 2xl:left-45
           `}
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3 leading-tight">
@@ -56,7 +56,7 @@ const Hero = () => {
             className={`
               ${Styles.logoHero}
               ${isDarkMode ? '' : 'inset-shadow-sm inset-shadow-indigo-500 shadow-lg shadow-cyan-900/50'}
-              w-60 lg:w-99 lg:h-99 2xl:w-105 2xl:h-105
+              sm:max-h-40 w-60 lg:w-99 lg:h-99 2xl:w-105 2xl:h-105
               rounded-4xl shadow-lg
             `}
           />
