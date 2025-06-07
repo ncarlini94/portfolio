@@ -192,7 +192,7 @@ const Contacto = () => {
                     value={formData.email}
                     onChange={handleChange}
                     className={`${isDarkMode ? 'bg-slate-700 text-white placeholder:text-slate-400 border-slate-600' : 'bg-slate-200 text-black'} w-full px-4 py-3 rounded-lg focus:border-teal-500`}
-                    placeholder="Juan@example.com"
+                    placeholder={t("MailEjemplo")}
                   />
                 </div>
                 <div>
@@ -215,7 +215,7 @@ const Contacto = () => {
                     onChange={handleChange}
 
                     className={`${isDarkMode ? 'bg-slate-700 text-white placeholder:text-slate-400 border-slate-600' : 'bg-slate-200 text-black'} w-full px-4 py-3 rounded-lg resize-none focus:border-teal-500 border outline-none transition-colors duration-300`}
-                    placeholder="Tu mensaje aquí..."
+                    placeholder={t("TextoMensaje")}
                   ></textarea>
                 </div>
                 <button
