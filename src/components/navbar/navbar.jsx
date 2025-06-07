@@ -9,8 +9,6 @@ import { useTranslation } from 'react-i18next'
 const Navbar = () => {
 
     const { t, i18n  } = useTranslation();
-    const text = "NICO";
-    const [index, setIndex] = useState(1);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const {isDarkMode} = useTheme()
 
@@ -37,20 +35,6 @@ const Navbar = () => {
       i18n.changeLanguage(lang);
     }
   }, [i18n]);
-
-
-    useEffect(() => {
-        const logo = document.getElementById("titulo");
-        const cursor = document.querySelector(".cursor");
-
-        if (index <= text.length) {
-            logo.innerHTML = text.slice(0, index) + (index < text.length ? '<span class="cursor">_</span>' : '');
-            const timeout = setTimeout(() => setIndex(index + 1), 300);
-            return () => clearTimeout(timeout);
-        } else if (cursor) {
-            cursor.style.animation = "none";
-        }
-    }, [index, text]);
 
 
     const changeLanguage = (e) => {
@@ -80,9 +64,6 @@ const toggleMenu = () => {
           >
             <div className="order-first flex content-center items-center">
               <img src={Logo} className={`${Styles.logo} w-10 h-10 order-first ms-4 shadow-blue-500/50`} />
-              <div id="titulo" className={`${Styles.titulo} ms-3 p-0`}>
-                N<span className="cursor">_</span>
-              </div>
             </div>
 
       <div className="hidden md:flex order-last  content-center font-semibold">

@@ -68,7 +68,7 @@ const Habilidades = () => {
                   <div key={habilidad.nombre} className="space-y-2">
                     <div className="flex justify-between items-center">
                       <div className="flex items-center">
-                        <img src={habilidad.img} className={`${isDarkMode ? '' : 'fill-white drop-shadow-xl/25'} w-8 h-8 inline-flex items-center justify-center mr-3
+                        <img src={habilidad.img} className={`${isDarkMode ? '' : 'fill-white drop-shadow-md/50'} w-8 h-8 inline-flex items-center justify-center mr-3
                         rounded-md bg-opacity-20`}/>
                         <span className="font-medium">{habilidad.nombre}</span>
                       </div>
