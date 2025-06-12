@@ -20,7 +20,7 @@ const Proyectos = () => {
       url: 'https://netproyect.netlify.app/',
       tags: ['React', 'Firebase', 'Javascript', 'CSS', 'Bootstrap'],
       github: '#',
-      demo: '#',
+      demo: 'https://netproyect.netlify.app/',
     },
     {
       id: 'Celulares',
@@ -30,7 +30,7 @@ const Proyectos = () => {
       url: 'https://sistemacelulares.onrender.com',
       tags: ['React', 'Node.js', 'postgreSQL', 'Express', 'Bootstrap', 'CSS'],
       github: '#',
-      demo: '#',
+      demo: 'https://sistemacelulares.onrender.com',
     }
   ]
 
