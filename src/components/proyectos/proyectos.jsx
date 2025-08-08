@@ -19,7 +19,7 @@ const Proyectos = () => {
       descripcion: 'Netflix',
       url: 'https://netproyect.netlify.app/',
       tags: ['React', 'Firebase', 'Javascript', 'CSS', 'Bootstrap'],
-      github: '#',
+      github: ['https://github.com/ncarlini94/netflix_final'],
       demo: 'https://netproyect.netlify.app/',
     },
     {
@@ -29,7 +29,7 @@ const Proyectos = () => {
       descripcion: 'Sistema',
       url: 'https://sistemacelulares.onrender.com',
       tags: ['React', 'Node.js', 'postgreSQL', 'Express', 'Bootstrap', 'CSS'],
-      github: '#',
+      github: ['https://github.com/ncarlini94/SistemaCelularesFrontend', 'https://github.com/ncarlini94/SistemaCelularesBackend'],
       demo: 'https://sistemacelulares.onrender.com',
     }
   ]
@@ -37,7 +37,7 @@ const Proyectos = () => {
 
   return (
     <>
-      <section id="Proyectos" className={`${Styles.section} ${isDarkMode ? 'bg-slate-900 bg-slate-900 text-white' : 'bg-slate-100'} section scroll-mt-20 transition-colors duration-300 `}>
+      <section id="Proyectos" className={`${Styles.section} ${isDarkMode ? 'bg-slate-900 text-white' : 'bg-slate-100'} section scroll-mt-20 transition-colors duration-300 `}>
       <div className={`${Styles.container} container max-sm:py-8 lg:h-120 2xl:h-180 mx-auto content-center`}>
                 <div className="text-center mb-8">
           <h2 className={`${isDarkMode ? 'text-white' : 'text-black'} text-3xl font-bold mb-2`}>{t("Proyectos")}</h2>
@@ -53,15 +53,18 @@ const Proyectos = () => {
                   className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className={`absolute inset-0 flex items-center justify-center gap-4 opacity-1 group-hover:opacity-100 transition-opacity duration-300 bg-slate-900/70`}>
+                {proyecto.github.map((repoUrl, idx) => (
                   <a
-                    href={proyecto.github}
+                    key={idx}
+                    href={repoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 rounded-full bg-white text-slate-800 hover:bg-teal-400 transition-colors duration-300"
-                    aria-label="View GitHub repository"
+                    aria-label={`View GitHub repo ${idx + 1}`}
                   >
                     <Github size={20} />
                   </a>
+                ))}
                   <a
                     href={proyecto.demo}
                     target="_blank"
