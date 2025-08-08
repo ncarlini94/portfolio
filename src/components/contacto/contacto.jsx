@@ -55,27 +55,25 @@ if (!formData.message.trim()) {
     }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
-    if (validateForm()) {
-      setIsSubmitting(true);
-      
-      setTimeout(() => {
-        setIsSubmitting(false);
-        setIsSubmitted(true);
-        setFormData({
-          name: '',
-          email: '',
-          message: ''
-        });
-        
-        setTimeout(() => {
-          setIsSubmitted(false);
-        }, 5000);
-      }, 1500);
-    }
-  };
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  if (!validateForm()) return;
+  setIsSubmitting(true);
+
+  try {
+    await fetch("/", {
+      method: "POST",
+      body: new FormData(e.target),
+    });
+
+    setIsSubmitted(true);
+    setFormData({ name: "", email: "", message: "" });
+  } catch (err) {
+    console.error(err);
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
 
   return (
