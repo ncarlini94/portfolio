@@ -2,3 +2,7 @@
     scroll-snap-align: start;
     height: auto;
 }
+
+.url{
+    text-decoration: none;
+}

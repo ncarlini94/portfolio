@@ -22,21 +22,25 @@ const Contacto = () => {
   const validateForm = () => {
     const newErrors = {};
     
-    if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
-    }
-    
-    if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Email is invalid';
-    }
-    
-    if (!formData.message.trim()) {
-      newErrors.message = 'Message is required';
-    } else if (formData.message.trim().length < 10) {
-      newErrors.message = 'Message is too short (minimum 10 characters)';
-    }
+if (!formData.name.trim()) {
+  newErrors.name = 'Por favor ingresa tu nombre';
+}
+
+if (!formData.email.trim()) {
+  newErrors.email = 'Por favor ingresa tu correo electrónico';
+} else if (
+  !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)
+) {
+  newErrors.email = 'Por favor ingresa un correo electrónico válido';
+}
+
+if (!formData.message.trim()) {
+  newErrors.message = 'Por favor ingresa tu mensaje';
+} else if (formData.message.trim().length < 10) {
+  newErrors.message =
+    'El mensaje es muy corto (mínimo 10 caracteres)';
+}
+
     
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -129,10 +133,7 @@ const Contacto = () => {
               <h3 className="text-xl font-bold">{t("Redes")}</h3>
               <div className="flex space-x-4">
                 <div className={`${isDarkMode ? 'bg-slate-700 text-white hover:bg-sky-700' : 'bg-slate-300 text-slate-600 hover:bg-slate-100'} w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300`}>
-                  <span className="font-bold">in</span>
-                </div>
-                <div className={`${isDarkMode ? 'bg-slate-700 text-white hover:bg-sky-700' : 'bg-slate-300 text-slate-600 hover:bg-slate-100'} w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300`}>
-                  <span className="font-bold">gh</span>
+                  <span className="font-bold"><a className={`${Styles.url}`} href="https://www.linkedin.com/in/nicol%C3%A1s-carlini/">in</a></span>
                 </div>
               </div>
             </div>
@@ -149,7 +150,8 @@ const Contacto = () => {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4" name="contact" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="contact" />
                 <div>
                 <div className="flex items-center">
                   <label
