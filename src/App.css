@@ -2,13 +2,3 @@ html {
   margin: 0;
   padding: 0;
 }
-
-
-@media (width > 768px) {
-  html {
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-    overflow-y: scroll;
-  }
-}
