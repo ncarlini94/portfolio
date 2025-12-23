@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 import useTheme from '../../hooks/useTheme'
 import HomeNetflix from './../../assets/Netflix/homeNetflix.jpeg'
 import LineasCelulares from './../../assets/SistemaCelulares/Lineas.png'
-import WhiteRoad from './../../assets/WhiteRoad/WhiteRoad.png'
+import WhiteRoad from './../../assets/whiteRoad/whiteroad.png'
 import Styles from './proyectos.module.css'
 import { ExternalLink, Github, FileCode } from 'lucide-react'
 
