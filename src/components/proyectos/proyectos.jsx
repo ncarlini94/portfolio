@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next'
 import useTheme from '../../hooks/useTheme'
 import HomeNetflix from './../../assets/Netflix/homeNetflix.jpeg'
 import LineasCelulares from './../../assets/SistemaCelulares/Lineas.png'
+import WhiteRoad from './../../assets/WhiteRoad/WhiteRoad.png'
 import Styles from './proyectos.module.css'
 import { ExternalLink, Github, FileCode } from 'lucide-react'
 
@@ -12,10 +13,20 @@ const Proyectos = () => {
 
 
   const proyectos = [
+      {
+      id: 'WhiteRoad',
+      imagen: WhiteRoad,
+      titulo: 'White Road',
+      descripcion: 'Proyecto web para taller de motos: reparación y mantenimiento.',
+      url: 'https://motoswhiteroad.netlify.app/',
+      tags: ['React', 'Javascript', 'CSS', 'Bootstrap'],
+      github: ['https://github.com/ncarlini94/whiteRoad'],
+      demo: 'https://motoswhiteroad.netlify.app/',
+    },
     {
       id: 'Netflix',
       imagen: HomeNetflix,
-      titulo: 'NetflixTitulo',
+      titulo: 'Netflix',
       descripcion: 'Netflix',
       url: 'https://netproyect.netlify.app/',
       tags: ['React', 'Firebase', 'Javascript', 'CSS', 'Bootstrap'],
@@ -25,7 +36,7 @@ const Proyectos = () => {
     {
       id: 'Celulares',
       imagen: LineasCelulares,
-      titulo: 'SistemaTitulo',
+      titulo: 'Sistema',
       descripcion: 'Sistema',
       url: 'https://sistemacelulares.onrender.com',
       tags: ['React', 'Node.js', 'postgreSQL', 'Express', 'Bootstrap', 'CSS'],
@@ -38,7 +49,7 @@ const Proyectos = () => {
   return (
     <>
       <section id="Proyectos" className={`${Styles.section} ${isDarkMode ? 'bg-slate-900 text-white' : 'bg-slate-100'} section scroll-mt-20 transition-colors duration-300 `}>
-      <div className={`${Styles.container} container max-sm:py-8 lg:h-120 2xl:h-180 mx-auto content-center`}>
+      <div className={`${Styles.container} container max-sm:py-8 lg:h-240 2xl:h-180 mx-auto content-center`}>
                 <div className="text-center mb-8">
           <h2 className={`${isDarkMode ? 'text-white' : 'text-black'} text-3xl font-bold mb-2`}>{t("Proyectos")}</h2>
           <div className={`w-20 h-1 mx-auto mb-6 bg-sky-400`}></div>
